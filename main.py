@@ -35,3 +35,10 @@ class Shape3D:
 
     def draw(self):
         print("Drawing a generic 3D shape")
+
+class Sphere(Shape3D):
+    def __init__(self, type, radius):
+        self.__type = type
+        self.__radius = radius
+
+    def volume(self):
