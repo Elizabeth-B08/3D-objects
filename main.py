@@ -1,44 +1,22 @@
-class Shape3D:
+from shape3d import Shape3D
 
-    def __init__(self, type, colour, x, y, z):
-        self.__type = type
-        self.__colour = colour
-        self.__x = x
-        self.__y = y
-        self.__z = z
+def main():
+    shape = Shape3D("Generic Shape", "Red")
 
-    # getters
-    def get_type(self):
-        return self.__type
+    # Test getters
+    print("Type:", shape.get_type())
+    print("Colour:", shape.get_colour())
 
-    def get_colour(self):
-        return self.__colour
+    # Test setters
+    shape.set_type("Updated Shape")
+    shape.set_colour("Blue")
 
-    def get_location(self):
-        return (self.__x, self.__y, self.__z)
+    print("Updated Type:", shape.get_type())
+    print("Updated Colour:", shape.get_colour())
 
-    # setters
-    def set_colour(self, colour):
-        self.__colour = colour
+    # Test methods
+    print("Volume:", shape.volume())
+    print("Surface Area:", shape.surface_area())
 
-    def set_location(self, x, y, z):
-        self.__x = x
-        self.__y = y
-        self.__z = z
-
-    # methods to override
-    def volume(self):
-        return None
-
-    def surface_area(self):
-        return None
-
-    def draw(self):
-        print("Drawing a generic 3D shape")
-
-class Sphere(Shape3D):
-    def __init__(self, type, radius):
-        self.__type = type
-        self.__radius = radius
-
-    def volume(self):
+if __name__ == "__main__":
+    main()
