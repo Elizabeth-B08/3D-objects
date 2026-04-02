@@ -93,7 +93,6 @@ class Torus(Shape):
         print(" *    * ")
         print("  ****  ")
 
-
 def main():
     # Create objects
     sphere = Sphere("Red", 0, 0, 0, 5)
