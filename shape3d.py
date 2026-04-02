@@ -35,6 +35,9 @@ class Shape3D():
     def get_location(self):
         return (self.__x, self.__y, self.__z)
 
+    def set_type(self, new_type):
+        self.__type = new_type
+
     # Setters
     def set_colour(self, colour):
         self.__colour = colour
